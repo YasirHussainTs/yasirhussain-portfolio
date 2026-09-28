@@ -1,4 +1,4 @@
-# Yasir Hussain · Portfolio (v2)
+# Yasir Hussain · Portfolio
 
 A static site. No build step, no dependencies.
 
