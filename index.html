@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Yasir Hussain</title>
+<meta name="description" content="Yasir Hussain — CRM & AI Automation Specialist in Dubai. I automate lead handling, follow-up, approvals and reporting across Zoho, Meta, WhatsApp and AI calling.">
+<meta property="og:title" content="Yasir Hussain · CRM & AI Automation Specialist">
+<meta property="og:description" content="I connect CRM, campaigns, WhatsApp, AI calling and finance tools into systems that run themselves. Dubai, UAE.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#09090d">
+<meta property="og:image" content="yasir.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="yasir.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #09090d;
+    --surface: #101117;
+    --card: #14151c;
+    --card-2: #1a1b24;
+    --line: rgba(255,255,255,.08);
+    --line-2: rgba(255,255,255,.14);
+    --text: #eceef4;
+    --dim: #a6abbb;
+    --muted: #71768a;
+    --blue: #3d9bff;
+    --violet: #b56cf5;
+    --green: #32d268;
+    --amber: #ffb340;
+    --paper: #f6f6f3;
+    --ink: #16171d;
+    --ink-dim: #5b5f6d;
+
+    --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Geist", system-ui, "Segoe UI", sans-serif;
+    --mono: "SF Mono", "Geist Mono", ui-monospace, Menlo, Consolas, monospace;
+    --serif: "Instrument Serif", "New York", Georgia, serif;
+    --gutter: clamp(16px, 4vw, 48px);
+    --max: 1200px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 { text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
+
+  /* ambient */
+  .bg-glow { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+  .bg-glow span { position: absolute; border-radius: 50%; filter: blur(120px); opacity: .16; transition: transform .6s ease-out; }
+  .bg-glow .g1 { width: 620px; height: 620px; background: var(--blue); top: -260px; right: -180px; }
+  .bg-glow .g2 { width: 520px; height: 520px; background: var(--violet); top: 40%; left: -240px; opacity: .1; }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .35;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    background-size: 200px;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding-inline: var(--gutter); }
+  section { position: relative; z-index: 1; padding-block: clamp(64px, 9vw, 120px); }
+
+  /* nav */
+  nav {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+    background: rgba(9,9,13,.72);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; font-size: 15px; letter-spacing: -.01em; }
+  .logo-mark {
+    width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--blue), var(--violet));
+    font-size: 12px; font-weight: 700; color: #fff; letter-spacing: 0;
+  }
+  .nav-links { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { text-decoration: none; font-size: 13.5px; color: var(--dim); transition: color .2s; }
+  .nav-links a:hover { color: var(--text); }
+
+  /* buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 44px; padding: 0 20px; border-radius: 999px;
+    font: 500 14.5px/1 var(--sans); letter-spacing: -.005em;
+    text-decoration: none; cursor: pointer; border: 1px solid transparent;
+    transition: transform .2s, background .2s, border-color .2s, color .2s;
+    white-space: nowrap;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn-primary { background: var(--text); color: var(--bg); }
+  .btn-primary:hover { background: #fff; }
+  .btn-blue { background: var(--blue); color: #fff; }
+  .btn-blue:hover { background: #5aabff; }
+  .btn-ghost { background: rgba(255,255,255,.04); color: var(--text); border-color: var(--line-2); }
+  .btn-ghost:hover { border-color: rgba(255,255,255,.3); background: rgba(255,255,255,.07); }
+  .btn-sm { height: 34px; padding: 0 14px; font-size: 13px; }
+  .btn svg { width: 16px; height: 16px; flex: none; }
+
+  /* labels */
+  .eyebrow {
+    font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase;
+    color: var(--blue); display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+  .h2 { font-size: clamp(32px, 5vw, 54px); font-weight: 600; letter-spacing: -.035em; line-height: 1.05; }
+  .h2 em, .hero h1 em {
+    font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -.01em;
+    background: linear-gradient(95deg, #6cb6ff 0%, var(--violet) 70%, #ff7eb3 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    padding-right: .06em;
+  }
+  .lede { color: var(--dim); font-size: clamp(16px, 1.6vw, 18.5px); max-width: 60ch; margin-top: 18px; }
+
+  /* hero */
+  .hero { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 8vw, 100px); }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+  .status {
+    display: inline-flex; align-items: center; gap: 9px; width: fit-content;
+    padding: 7px 14px 7px 12px; border-radius: 999px;
+    background: rgba(50,210,104,.08); border: 1px solid rgba(50,210,104,.25);
+    font: 500 12.5px/1 var(--mono); color: #7fe3a1;
+    animation: up .7s ease both;
+  }
+  .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(50,210,104,.6); animation: ping 2s infinite; }
+  @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(50,210,104,.55); } 70%,100% { box-shadow: 0 0 0 9px rgba(50,210,104,0); } }
+  .hero h1 {
+    font-size: clamp(42px, 6.6vw, 82px); font-weight: 650; letter-spacing: -.045em; line-height: .98;
+    margin-top: 22px; animation: up .7s .08s ease both;
+  }
+  .hero h1 em { font-size: 1.08em; line-height: .9; }
+  .hero .who { margin-top: 26px; display: flex; align-items: center; gap: 16px; animation: up .7s .16s ease both; }
+  .who-text { display: flex; flex-direction: column; gap: 2px; }
+  .hero .who strong { font-size: 19px; font-weight: 600; letter-spacing: -.015em; }
+  .hero .who span { color: var(--dim); font-size: 15px; }
+  .hero .lede { animation: up .7s .22s ease both; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; animation: up .7s .3s ease both; }
+  .trust { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; animation: up .7s .38s ease both; }
+  .chip {
+    font: 400 12px/1 var(--mono); padding: 7px 10px; border-radius: 7px;
+    background: rgba(255,255,255,.035); border: 1px solid var(--line); color: var(--dim);
+    white-space: nowrap;
+  }
+  @keyframes up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+  /* automation window */
+  .window {
+    background: linear-gradient(180deg, rgba(26,27,36,.92), rgba(16,17,23,.96));
+    border: 1px solid var(--line-2); border-radius: 18px; overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.06);
+    animation: up .8s .2s ease both;
+  }
+  .win-bar { display: flex; align-items: center; gap: 7px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  .win-bar i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+  .win-bar i:nth-child(1) { background: #ff5f57; } .win-bar i:nth-child(2) { background: #febc2e; } .win-bar i:nth-child(3) { background: #28c840; }
+  .win-title { margin: 0 auto; font: 400 12px/1 var(--mono); color: var(--muted); padding-right: 40px; }
+  .win-body { padding: 18px; display: grid; gap: 16px; }
+  .flow { display: grid; gap: 0; position: relative; }
+  .node {
+    display: grid; grid-template-columns: 38px 1fr auto; gap: 12px; align-items: center;
+    padding: 9px 10px; border-radius: 12px; position: relative;
+    transition: background .35s;
+  }
+  .node + .node::before {
+    content: ""; position: absolute; left: 28px; top: -9px; height: 18px; width: 2px;
+    background: var(--line-2); border-radius: 2px; transition: background .35s;
+  }
+  .node.done + .node::before, .node.done + .node.active::before { background: linear-gradient(var(--blue), var(--violet)); }
+  .node-ic {
+    width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
+    background: rgba(255,255,255,.05); border: 1px solid var(--line); color: var(--muted);
+    transition: all .35s;
+  }
+  .node-ic svg { width: 18px; height: 18px; }
+  .node-t { font-size: 14px; font-weight: 550; letter-spacing: -.01em; }
+  .node-s { font: 400 11.5px/1.35 var(--mono); color: var(--muted); }
+  .node-state { font: 500 11px/1 var(--mono); color: var(--muted); padding: 5px 8px; border-radius: 6px; background: rgba(255,255,255,.04); }
+  .node.done .node-ic { color: var(--blue); border-color: rgba(61,155,255,.35); background: rgba(61,155,255,.1); }
+  .node.done .node-state { color: #7fe3a1; background: rgba(50,210,104,.1); }
+  .node.active { background: rgba(61,155,255,.07); }
+  .node.active .node-ic { color: #fff; background: var(--blue); border-color: var(--blue); box-shadow: 0 0 24px rgba(61,155,255,.5); }
+  .node.active .node-state { color: var(--amber); background: rgba(255,179,64,.1); }
+  .log {
+    background: #07070a; border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 14px; font: 400 12px/1.75 var(--mono); color: var(--dim); min-height: 104px;
+  }
+  .log .ts { color: var(--muted); margin-right: 8px; }
+  .log .ok { color: #7fe3a1; }
+  .log .caret { display: inline-block; width: 7px; height: 13px; background: var(--blue); vertical-align: -2px; animation: blink 1.1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* facts strip */
+  .facts { padding-block: 0; }
+  .facts-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .fact { padding: 26px 22px; display: flex; flex-direction: column; gap: 6px; }
+  .fact + .fact { border-left: 1px solid var(--line); }
+  .fact b { font-size: clamp(28px, 3.4vw, 40px); font-weight: 600; letter-spacing: -.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .fact span { color: var(--muted); font-size: 13.5px; }
+
+  /* avatar */
+  .avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; object-position: 50% 35%; flex: none; display: block; box-shadow: 0 0 0 1px rgba(255,255,255,.14); }
+
+  /* send options */
+  .send { display: grid; gap: 10px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .send-label { font: 500 11px/1 var(--mono); color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+  .send-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .send-row .btn { height: 42px; padding: 0 10px; font-size: 13.5px; border-radius: 12px; }
+  .send-row .btn svg { width: 17px; height: 17px; }
+  .send-hint { font-size: 12.5px; color: var(--muted); }
+  @media (max-width: 640px) { .send-row { grid-template-columns: 1fr 1fr; } }
+
+  /* brief */
+  .brief-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 48px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px;
+    position: relative; overflow: hidden; transition: border-color .3s, transform .3s;
+  }
+  .card::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
+    background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 0%), rgba(61,155,255,.12), transparent 60%);
+  }
+  .card:hover { border-color: var(--line-2); }
+  .card:hover::after { opacity: 1; }
+  .card-ic { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(61,155,255,.1); color: var(--blue); margin-bottom: 20px; }
+  .card-ic svg { width: 20px; height: 20px; }
+  .card h3 { font-size: 20px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; }
+  .card p { color: var(--dim); font-size: 15px; margin-top: 10px; }
+  .card .how { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font: 400 12px/1.6 var(--mono); color: var(--muted); }
+
+  /* before / after */
+  .ba-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .seg {
+    display: inline-flex; padding: 4px; border-radius: 999px; background: var(--card); border: 1px solid var(--line);
+  }
+  .seg button {
+    font: 500 14px/1 var(--sans); color: var(--dim); background: none; border: 0; cursor: pointer;
+    padding: 11px 18px; border-radius: 999px; transition: all .25s;
+  }
+  .seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+  .seg button[data-mode="auto"][aria-pressed="true"] { background: var(--blue); color: #fff; }
+  .journey { margin-top: 36px; display: grid; gap: 10px; }
+  .step {
+    display: grid; grid-template-columns: 160px 1fr 120px; gap: 20px; align-items: center;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px;
+  }
+  .step-name { font: 500 12.5px/1.3 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .step-text { font-size: 15.5px; color: var(--text); transition: opacity .25s; }
+  .step-tag { justify-self: end; font: 500 11.5px/1 var(--mono); padding: 6px 9px; border-radius: 6px; white-space: nowrap; }
+  .step-tag.bad { color: #ff8a80; background: rgba(255,90,80,.1); }
+  .step-tag.good { color: #7fe3a1; background: rgba(50,210,104,.1); }
+  .journey.swap .step-text { opacity: 0; }
+
+  /* AI */
+  .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; align-items: stretch; }
+  .ai-cards { display: grid; gap: 14px; }
+  .ai-card { display: grid; grid-template-columns: 48px 1fr; gap: 18px; align-items: start; padding: 22px; }
+  .ai-card h3 { font-size: 18px; font-weight: 600; letter-spacing: -.02em; }
+  .ai-card p { color: var(--dim); font-size: 14.5px; margin-top: 6px; }
+  .ai-logo {
+    width: 48px; height: 48px; border-radius: 13px; display: grid; place-items: center;
+    font: 700 15px/1 var(--sans); color: var(--c);
+    background: color-mix(in srgb, var(--c) 14%, transparent); border: 1px solid color-mix(in srgb, var(--c) 35%, transparent);
+  }
+  .ai-chat { animation: none; display: flex; flex-direction: column; }
+  .chat { padding: 20px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .bubble { max-width: 88%; padding: 12px 15px; border-radius: 16px; font-size: 14.5px; line-height: 1.5; }
+  .bubble.me { align-self: flex-end; background: var(--blue); color: #fff; border-bottom-right-radius: 5px; }
+  .bubble.ai { align-self: flex-start; background: var(--card-2); border: 1px solid var(--line); border-bottom-left-radius: 5px; color: var(--dim); }
+  .bubble.ai strong { color: var(--text); font-weight: 600; }
+  .suggest { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 13.5px; color: #8cc4ff; }
+  .tools { display: grid; gap: 6px; font: 400 11.5px/1.4 var(--mono); color: var(--muted); }
+  .tools b { color: #d2a6ff; font-weight: 500; margin-right: 6px; }
+  .chat-input { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-radius: 12px; background: #0c0d12; border: 1px solid var(--line-2); color: var(--muted); font-size: 14px; }
+  .chat-input i { width: 26px; height: 26px; border-radius: 50%; background: var(--blue); flex: none; }
+
+  /* work */
+  .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; margin-top: 48px; }
+  .proj { grid-column: span 6; display: flex; flex-direction: column; gap: 14px; }
+  .proj.wide { grid-column: span 12; display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: center; }
+  .proj-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .tag { font: 500 11.5px/1 var(--mono); padding: 6px 9px; border-radius: 6px; background: rgba(61,155,255,.1); color: #8cc4ff; }
+  .tag.v { background: rgba(181,108,245,.12); color: #d2a6ff; }
+  .tag.g { background: rgba(50,210,104,.1); color: #7fe3a1; }
+  .tag.a { background: rgba(255,179,64,.1); color: #ffcc80; }
+  .proj h3 { font-size: clamp(22px, 2.4vw, 30px); font-weight: 600; letter-spacing: -.03em; line-height: 1.15; }
+  .proj p { color: var(--dim); font-size: 15px; }
+  .stack { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+  .modules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .mod {
+    display: flex; align-items: center; gap: 10px; padding: 11px 12px; border-radius: 10px;
+    background: rgba(255,255,255,.03); border: 1px solid var(--line); font-size: 13.5px; color: var(--dim);
+  }
+  .mod i { width: 7px; height: 7px; border-radius: 50%; background: var(--green); flex: none; }
+
+  /* stack */
+  .stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 48px; }
+  .stack-col h3 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; display: flex; align-items: center; gap: 10px; }
+  .stack-col h3 .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .stack-col p { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
+  .stack-col .stack { margin-top: 16px; }
+
+  /* experience */
+  .xp { margin-top: 48px; display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .xp-row { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding-block: 32px; border-bottom: 1px solid var(--line); }
+  .xp-when { font: 400 13px/1.5 var(--mono); color: var(--muted); }
+  .xp-when .now { display: inline-flex; align-items: center; gap: 6px; color: #7fe3a1; margin-top: 6px; }
+  .xp-role { font-size: 21px; font-weight: 600; letter-spacing: -.02em; }
+  .xp-co { color: #8cc4ff; font-size: 15px; margin-top: 2px; }
+  .xp ul { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; max-width: 70ch; }
+  .xp li { color: var(--dim); font-size: 15px; padding-left: 18px; position: relative; }
+  .xp li::before { content: "→"; position: absolute; left: 0; color: var(--muted); font-size: 13px; }
+
+  /* CV */
+  .cv-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: 8px; }
+  .cv-side { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 16px; }
+  .cv-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .cv-note { font-size: 13.5px; color: var(--muted); }
+  .cv-note a { color: #8cc4ff; text-decoration: none; }
+  .paper {
+    background: var(--paper); color: var(--ink); border-radius: 6px; padding: clamp(24px, 4vw, 48px);
+    box-shadow: 0 30px 80px rgba(0,0,0,.5); font-size: 14px; line-height: 1.55;
+  }
+  .paper h3 { font-size: 26px; font-weight: 650; letter-spacing: -.03em; }
+  .paper .cv-title { font: 500 11.5px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: #1f6fd1; margin-top: 4px; }
+  .paper .cv-contact { color: var(--ink-dim); font-size: 13px; margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .paper h4 {
+    font: 600 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim);
+    margin: 24px 0 10px; padding-bottom: 8px; border-bottom: 1px solid #dcdcd6;
+  }
+  .paper .cv-job { display: grid; gap: 2px; margin-top: 12px; }
+  .paper .cv-job-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .paper .cv-job-top b { font-weight: 600; }
+  .paper .cv-job-top span { color: var(--ink-dim); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+  .paper .cv-job em { font-style: normal; color: var(--ink-dim); font-size: 13px; }
+  .paper ul { margin: 6px 0 0; padding-left: 18px; }
+  .paper li { margin-top: 3px; }
+  .paper .cv-skills { display: grid; grid-template-columns: 150px 1fr; gap: 6px 14px; }
+  .paper .cv-skills b { font-weight: 600; font-size: 13px; }
+
+  /* contact */
+  .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(28px, 4vw, 56px); margin-top: 48px; align-items: start; }
+  .reach { display: grid; gap: 10px; }
+  .reach-row {
+    display: grid; grid-template-columns: 40px 1fr auto; gap: 14px; align-items: center;
+    padding: 14px 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--line);
+  }
+  .reach-row .ic { width: 40px; height: 40px; border-radius: 11px; background: rgba(255,255,255,.05); display: grid; place-items: center; color: var(--dim); }
+  .reach-row .ic svg { width: 18px; height: 18px; }
+  .reach-row small { display: block; font: 500 11px/1 var(--mono); color: var(--muted); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 5px; }
+  .reach-row .val { font-size: 15px; user-select: all; word-break: break-all; }
+  .composer { background: var(--card); border: 1px solid var(--line-2); border-radius: 20px; padding: 24px; display: grid; gap: 18px; }
+  .composer h3 { font-size: 19px; font-weight: 600; letter-spacing: -.02em; }
+  .composer .sub { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
+  .intents { display: flex; flex-wrap: wrap; gap: 8px; }
+  .intent {
+    font: 500 13.5px/1 var(--sans); padding: 10px 14px; border-radius: 999px; cursor: pointer;
+    background: rgba(255,255,255,.04); border: 1px solid var(--line-2); color: var(--dim); transition: all .2s;
+  }
+  .intent[aria-pressed="true"] { background: rgba(61,155,255,.14); border-color: var(--blue); color: #fff; }
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .field { display: grid; gap: 6px; }
+  .field label { font: 500 11px/1 var(--mono); color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+  .field input, .field textarea {
+    width: 100%; background: #0c0d12; border: 1px solid var(--line-2); border-radius: 10px;
+    padding: 11px 13px; color: var(--text); font: 400 14.5px/1.4 var(--sans); outline: none; transition: border-color .2s;
+  }
+  .field textarea { resize: vertical; min-height: 150px; font-size: 14px; line-height: 1.55; }
+  .field input:focus, .field textarea:focus { border-color: var(--blue); }
+  .composer-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .toast {
+    position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px);
+    background: var(--text); color: var(--bg); font-size: 14px; font-weight: 500; padding: 11px 18px; border-radius: 999px;
+    opacity: 0; pointer-events: none; transition: all .25s; z-index: 100;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  footer { position: relative; z-index: 1; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 28px; font: 400 12.5px/1.5 var(--mono); color: var(--muted); }
+
+  /* responsive */
+  @media (max-width: 980px) {
+    .hero .wrap, .cv-wrap, .contact-grid, .proj.wide, .ai-grid { grid-template-columns: 1fr; }
+    .brief-grid { grid-template-columns: 1fr; }
+    .stack-grid { grid-template-columns: 1fr 1fr; }
+    .proj { grid-column: span 12; }
+    .cv-side { position: static; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 640px) {
+    .facts-row { grid-template-columns: 1fr 1fr; }
+    .fact:nth-child(3) { border-left: 0; }
+    .fact:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .step { grid-template-columns: 1fr; gap: 8px; padding: 16px; }
+    .step-tag { justify-self: start; }
+    .xp-row { grid-template-columns: 1fr; gap: 10px; }
+    .stack-grid, .fields, .modules { grid-template-columns: 1fr; }
+    .paper .cv-skills { grid-template-columns: 1fr; gap: 2px; }
+    .paper .cv-skills b { margin-top: 8px; }
+    .node { grid-template-columns: 34px 1fr; }
+    .node-state { display: none; }
+    .nav-cta .btn-ghost { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-glow" aria-hidden="true"><span class="g1"></span><span class="g2"></span></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><img class="avatar" src="yasir.jpg" alt="Yasir Hussain" width="32" height="32">Yasir Hussain</a>
+    <ul class="nav-links">
+      <li><a href="#brief">What I do</a></li>
+      <li><a href="#ai">AI &amp; MCP</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+    <div class="nav-cta" style="display:flex;gap:8px">
+      <a href="YasirHussain-Resume-2026.pdf" download="YasirHussain-Resume-2026.pdf" class="dl-cv btn btn-ghost btn-sm">Download CV</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="status"><span class="pulse"></span>Open to automation roles · Dubai, UAE</div>
+      <h1>I turn manual work into <em>systems that run themselves.</em></h1>
+      <div class="who">
+        <div class="who-text">
+          <strong>Yasir Hussain</strong>
+          <span>CRM &amp; AI Automation Specialist · Software Engineer</span>
+        </div>
+      </div>
+      <p class="lede">I connect your CRM (Zoho, Salesforce or any CRM with an API), ad campaigns, WhatsApp, AI calling and finance tools into one flow, so every lead gets a fast reply, every task has an owner, and managers see the real numbers without chasing anyone.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email Yasir
+        </a>
+        <a href="YasirHussain-Resume-2026.pdf" download="YasirHussain-Resume-2026.pdf" class="dl-cv btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          Download CV
+        </a>
+      </div>
+      <div class="trust">
+        <span class="chip">Zoho CRM · Flow · Creator · Books</span>
+        <span class="chip">Salesforce</span>
+        <span class="chip">Make.com · Zapier</span>
+        <span class="chip">Meta Lead Ads</span>
+        <span class="chip">WhatsApp · Gallabox</span>
+        <span class="chip">AI calling</span>
+        <span class="chip">Claude · MCP</span>
+        <span class="chip">Next.js · TypeScript</span>
+      </div>
+    </div>
+
+    <div class="window" aria-label="Example automation: a new lead moving through the system">
+      <div class="win-bar"><i></i><i></i><i></i><span class="win-title">lead-engine · live example</span></div>
+      <div class="win-body">
+        <div class="flow" id="flow">
+          <div class="node" data-log="New enquiry received from Meta Lead Ads">
+            <div class="node-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></div>
+            <div><div class="node-t">Lead captured</div><div class="node-s">Meta Lead Ads → Zoho CRM</div></div>
+            <span class="node-state">waiting</span>
+          </div>
+          <div class="node" data-log="Assigned to owner by service &amp; language">
+            <div class="node-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+            <div><div class="node-t">Owner assigned</div><div class="node-s">routing rules · no duplicates</div></div>
+            <span class="node-state">waiting</span>
+          </div>
+          <div class="node" data-log="AI call finished · intent noted on record">
+            <div class="node-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+            <div><div class="node-t">AI call made</div><div class="node-s">TidyHire result → CRM record</div></div>
+            <span class="node-state">waiting</span>
+          </div>
+          <div class="node" data-log="WhatsApp follow-up sent via Gallabox">
+            <div class="node-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12Z"/></svg></div>
+            <div><div class="node-t">Follow-up sent</div><div class="node-s">WhatsApp · reminder set</div></div>
+            <span class="node-state">waiting</span>
+          </div>
+          <div class="node" data-log="Deal won · handed to Zoho Books for invoicing">
+            <div class="node-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+            <div><div class="node-t">Finance &amp; report</div><div class="node-s">Books handoff · dashboard updated</div></div>
+            <span class="node-state">waiting</span>
+          </div>
+        </div>
+        <div class="log" id="log" aria-live="off"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- FACTS -->
+<section class="facts">
+  <div class="wrap">
+    <div class="facts-row">
+      <div class="fact"><b>2022</b><span>Shipping production software since</span></div>
+      <div class="fact"><b>3</b><span>Companies across UAE &amp; India</span></div>
+      <div class="fact"><b>14</b><span>Modules in the internal platform I built</span></div>
+      <div class="fact"><b>4</b><span>Languages: English, Arabic, Hindi, Malayalam</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section id="brief">
+  <div class="wrap">
+    <div class="eyebrow">What I do</div>
+    <h2 class="h2">Three things change<br>when I join <em>your team.</em></h2>
+    <p class="lede">I start from how your business earns money, not from the software. Each automation has one job: remove a manual handoff that loses time, leads or visibility.</p>
+
+    <div class="brief-grid">
+      <article class="card">
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>No lead goes cold</h3>
+        <p>Every enquiry from Meta, your website or WhatsApp lands in the CRM right away, goes to the right person, and gets an automatic first touch.</p>
+        <div class="how">Meta Lead Ads · Make.com · Zoho CRM · Salesforce · AI calling · Gallabox</div>
+      </article>
+      <article class="card">
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>Every stage has an owner</h3>
+        <p>Routing, reminders, approvals and document flows are built in, so work moves from sales to operations to finance without anyone chasing it.</p>
+        <div class="how">Zoho Flow · Creator · Books · webhooks · REST APIs</div>
+      </article>
+      <article class="card">
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="5"/><rect x="12" y="8" width="3" height="9"/><rect x="17" y="5" width="3" height="12"/></svg></div>
+        <h3>You see the real numbers</h3>
+        <p>Clean pipeline data and dashboards show managers what to act on today. Next step: ask your data questions in plain English with AI agents.</p>
+        <div class="how">Zoho Analytics · Next.js dashboards · Claude · MCP · AI agents</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="before-after" style="padding-top:0">
+  <div class="wrap">
+    <div class="ba-head">
+      <div>
+        <div class="eyebrow">One lead, two ways</div>
+        <h2 class="h2">Your lead journey,<br><em>before and after.</em></h2>
+      </div>
+      <div class="seg" role="group" aria-label="Compare manual and automated">
+        <button type="button" data-mode="manual" aria-pressed="false">Manual today</button>
+        <button type="button" data-mode="auto" aria-pressed="true">With automation</button>
+      </div>
+    </div>
+    <div class="journey" id="journey"></div>
+  </div>
+</section>
+
+<!-- AI & MCP -->
+<section id="ai" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">AI &amp; MCP</div>
+    <h2 class="h2">Companies are adding an AI brain.<br><em>I connect it to the business.</em></h2>
+    <p class="lede">An AI assistant is only useful when it can see your real data. I use the Model Context Protocol (MCP) to give tools like Claude safe, controlled access to your CRM, finance and files, so your team can ask questions and get answers from live company data.</p>
+
+    <div class="ai-grid">
+      <div class="ai-cards">
+        <article class="card ai-card">
+          <div class="ai-logo" style="--c:#d97757">C</div>
+          <div>
+            <h3>Claude + MCP</h3>
+            <p>Connect Claude to Zoho CRM, Zoho Books and internal tools through MCP. Managers ask in plain English; Claude reads the records and answers.</p>
+          </div>
+        </article>
+        <article class="card ai-card">
+          <div class="ai-logo" style="--c:#1b96ff">SF</div>
+          <div>
+            <h3>Salesforce &amp; Agentforce</h3>
+            <p>The same lead, follow-up and reporting practices on Salesforce CRM, with Agentforce AI agents acting on customer records.</p>
+          </div>
+        </article>
+        <article class="card ai-card">
+          <div class="ai-logo" style="--c:#32d268">AI</div>
+          <div>
+            <h3>AI in daily work</h3>
+            <p>AI calling, WhatsApp assistants and call summaries saved to the CRM, so staff start every conversation already informed.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="window ai-chat" aria-label="Example: a manager asking an AI assistant about CRM data">
+        <div class="win-bar"><i></i><i></i><i></i><span class="win-title">ask your business · example</span></div>
+        <div class="chat">
+          <div class="bubble me">Which Meta leads from this week haven't had a first call yet?</div>
+          <div class="tools">
+            <span><b>MCP</b> zoho_crm.search_records · source = Meta, created ≥ Monday</span>
+            <span><b>MCP</b> zoho_crm.get_related · calls, WhatsApp</span>
+          </div>
+          <div class="bubble ai">
+            <strong>6 leads have no first call yet.</strong> Four are Study Abroad enquiries owned by the same advisor, who is at full capacity today.
+            <div class="suggest">Suggested: move 2 leads to the next free advisor and send an automatic WhatsApp reply.</div>
+          </div>
+          <div class="chat-input"><span>Ask about leads, deals, invoices…</span><i></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Selected work</div>
+    <h2 class="h2">Systems I have <em>built and shipped.</em></h2>
+
+    <div class="work-grid">
+      <article class="card proj wide">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div class="proj-meta"><span class="tag">360Medicare Consultancy</span><span class="tag a">Test stage</span></div>
+          <h3>Unified Business Operations Platform</h3>
+          <p>An internal platform that brings CRM, recruitment, IT, marketing, budgets and approvals into one application for a five-department consultancy, built to replace a patchwork of tools. Includes a fixed-vocabulary automations engine and "Ask 360", a natural-language query planner over company data.</p>
+          <div class="stack">
+            <span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">REST APIs</span><span class="chip">Vercel</span>
+          </div>
+        </div>
+        <div class="modules" aria-label="Platform modules">
+          <div class="mod"><i></i>CRM · leads, deals, my day</div>
+          <div class="mod"><i></i>Recruitment · seat counting</div>
+          <div class="mod"><i></i>IT service desk · SLA</div>
+          <div class="mod"><i></i>Asset register · custody</div>
+          <div class="mod"><i></i>Marketing creative queue</div>
+          <div class="mod"><i></i>Budgets · threshold approvals</div>
+          <div class="mod"><i></i>Automations engine</div>
+          <div class="mod"><i></i>Ask 360 · plain-English queries</div>
+        </div>
+      </article>
+
+      <article class="card proj">
+        <div class="proj-meta"><span class="tag">360Medicare Consultancy</span><span class="tag g">Live</span></div>
+        <h3>Lead Engagement &amp; CRM Automation</h3>
+        <p>Campaign leads, AI calling outcomes, assignment and follow-up connected in one flow, so sales staff see customer intent on a shared CRM record before they pick up the phone.</p>
+        <div class="stack">
+          <span class="chip">Zoho CRM</span><span class="chip">Zoho Flow</span><span class="chip">Make.com</span><span class="chip">Meta Lead Ads</span><span class="chip">TidyHire AI</span><span class="chip">Gallabox</span><span class="chip">Webhooks</span>
+        </div>
+      </article>
+
+      <article class="card proj">
+        <div class="proj-meta"><span class="tag v">Erick Trading</span><span class="tag g">Shipped</span></div>
+        <h3>POS, Billing &amp; Booking Suite</h3>
+        <p>Point of sale, billing, bookings and customer management, with Stripe payments, Firebase notifications, a Next.js web front and Flutter mobile features built on MVVM.</p>
+        <div class="stack">
+          <span class="chip">Laravel</span><span class="chip">MySQL</span><span class="chip">Next.js</span><span class="chip">Flutter</span><span class="chip">Stripe</span><span class="chip">Firebase</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Toolkit</div>
+    <h2 class="h2">Business tools on one side.<br><em>Modern code</em> on the other.</h2>
+    <p class="lede">When a no-code tool is enough, I use it. When the business outgrows it, I build the app.</p>
+    <div class="stack-grid">
+      <div class="card stack-col">
+        <h3><span class="dot" style="background:var(--blue)"></span>CRM platforms</h3>
+        <p>Zoho, Salesforce, or any CRM with an API</p>
+        <div class="stack"><span class="chip">Salesforce CRM</span><span class="chip">Zoho CRM</span><span class="chip">Flow</span><span class="chip">Creator</span><span class="chip">Books</span><span class="chip">Analytics</span><span class="chip">Recruit</span></div>
+      </div>
+      <div class="card stack-col">
+        <h3><span class="dot" style="background:var(--green)"></span>Automation</h3>
+        <p>What moves work between people</p>
+        <div class="stack"><span class="chip">Make.com</span><span class="chip">Zapier</span><span class="chip">Power Automate</span><span class="chip">Gallabox</span><span class="chip">WhatsApp</span><span class="chip">Meta Lead Ads</span><span class="chip">Webhooks</span></div>
+      </div>
+      <div class="card stack-col">
+        <h3><span class="dot" style="background:var(--violet)"></span>Modern apps</h3>
+        <p>What I build custom tools with</p>
+        <div class="stack"><span class="chip">Next.js</span><span class="chip">JavaScript ES6+</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span><span class="chip">shadcn/ui</span><span class="chip">Flutter</span></div>
+      </div>
+      <div class="card stack-col">
+        <h3><span class="dot" style="background:var(--amber)"></span>Backend, data &amp; AI</h3>
+        <p>What keeps it reliable</p>
+        <div class="stack"><span class="chip">Laravel</span><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Claude</span><span class="chip">MCP</span><span class="chip">Agentforce</span><span class="chip">AI agents</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Experience</div>
+    <h2 class="h2">From writing code to <em>running systems.</em></h2>
+    <div class="xp">
+      <div class="xp-row">
+        <div class="xp-when">Nov 2025 — Present<br><span class="now"><span class="pulse"></span>Current role</span></div>
+        <div>
+          <div class="xp-role">Backend &amp; CRM Automation Specialist</div>
+          <div class="xp-co">360Medicare Consultancy LLC · Dubai</div>
+          <ul>
+            <li>Design CRM workflows so sales teams answer new leads quickly and follow up consistently</li>
+            <li>Connect Meta lead campaigns to Zoho CRM through Make.com, Zapier and Zoho LeadChain</li>
+            <li>Link TidyHire AI calling outcomes to lead records so staff see intent before the next action</li>
+            <li>Build workflows across Zoho CRM, Flow, Creator and Books that tie sales to operations and finance</li>
+            <li>Build the unified internal platform and research MCP and agentic AI for decision support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xp-row">
+        <div class="xp-when">Apr 2025 — Oct 2025</div>
+        <div>
+          <div class="xp-role">Software Engineer</div>
+          <div class="xp-co">Erick Trading LLC · Sharjah</div>
+          <ul>
+            <li>Built POS, billing, booking and customer management features with Laravel, MySQL and REST APIs</li>
+            <li>Built web experiences in Next.js and mobile features in Flutter using MVVM</li>
+            <li>Connected Stripe payments, Firebase notifications and API integrations; customised WordPress and Wix sites</li>
+            <li>Provided IT support across departments and shaped software around staff workflows</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xp-row">
+        <div class="xp-when">Jun 2022 — Jul 2024</div>
+        <div>
+          <div class="xp-role">Software Engineer</div>
+          <div class="xp-co">Diviso SoftTech · India</div>
+          <ul>
+            <li>Built backend features and integrations with Java, Spring Boot, microservices and REST APIs</li>
+            <li>Built Flutter features on top of backend APIs, from server logic to mobile experience</li>
+            <li>Worked in sprints with code reviews; mentored juniors and interns; published reusable Spring Boot and Flutter modules</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv" style="padding-top:0">
+  <div class="wrap cv-wrap">
+    <div class="cv-side">
+      <div class="eyebrow">CV brief</div>
+      <h2 class="h2">The one-page <em>version.</em></h2>
+      <p class="lede" style="margin-top:6px">A short version to read here. Download the full original resume as a PDF, or copy the text to paste into an application form.</p>
+      <div class="cv-actions">
+        <a class="dl-cv btn btn-blue" href="YasirHussain-Resume-2026.pdf" download="YasirHussain-Resume-2026.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          Download resume (PDF)
+        </a>
+        <a class="btn btn-ghost" href="YasirHussain-Resume-2026.pdf" target="_blank" rel="noopener">View resume ↗</a>
+        <button type="button" class="btn btn-ghost" id="copy-cv">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+          Copy CV as text
+        </button>
+              </div>
+      <p class="cv-note">Original resume · PDF · updated 2026 · <a href="https://linkedin.com/in/yasir-hussain-a78b641aa" target="_blank" rel="noopener">LinkedIn profile ↗</a></p>
+    </div>
+
+    <article class="paper" aria-label="CV">
+      <h3>Yasir Hussain</h3>
+      <div class="cv-title">CRM Automation Specialist · AI &amp; Business Process Automation</div>
+      <div class="cv-contact"><span>Dubai, UAE</span><span>+971 50 512 0313</span><span>yasirhussaints@outlook.com</span><span>github.com/YasirHussainTs</span></div>
+
+      <h4>Summary</h4>
+      <p>CRM and automation specialist with a software engineering background. I design connected sales and operations workflows across Zoho, Salesforce, Make.com, Zapier, WhatsApp and AI calling, and build custom tools in Next.js, Laravel and Spring Boot when the business needs more. Focus: fast lead response, clear ownership, accurate pipeline data and reporting managers can act on.</p>
+
+      <h4>Experience</h4>
+      <div class="cv-job">
+        <div class="cv-job-top"><b>Backend &amp; CRM Automation Specialist</b><span>Nov 2025 – Present</span></div>
+        <em>360Medicare Consultancy LLC, Dubai</em>
+        <ul>
+          <li>Meta lead campaigns → Zoho CRM with structured assignment and tracking</li>
+          <li>TidyHire AI calling results integrated into lead records</li>
+          <li>Workflows across Zoho CRM, Flow, Creator and Books; routing, approvals, notifications</li>
+          <li>Building a unified internal operations platform (Next.js, TypeScript, PostgreSQL)</li>
+        </ul>
+      </div>
+      <div class="cv-job">
+        <div class="cv-job-top"><b>Software Engineer</b><span>Apr 2025 – Oct 2025</span></div>
+        <em>Erick Trading LLC, Sharjah</em>
+        <ul>
+          <li>POS, billing, booking and CRM features in Laravel, MySQL, REST APIs</li>
+          <li>Next.js web and Flutter mobile; Stripe and Firebase integrations</li>
+        </ul>
+      </div>
+      <div class="cv-job">
+        <div class="cv-job-top"><b>Software Engineer</b><span>Jun 2022 – Jul 2024</span></div>
+        <em>Diviso SoftTech, India</em>
+        <ul>
+          <li>Java, Spring Boot microservices and REST APIs; Flutter features on backend APIs</li>
+          <li>Mentored juniors; reusable open-source Spring Boot and Flutter modules</li>
+        </ul>
+      </div>
+
+      <h4>Skills</h4>
+      <div class="cv-skills">
+        <b>CRM platforms</b><span>Zoho CRM, Flow, Creator, Books, Analytics, Recruit; Salesforce CRM; lead lifecycle, pipelines, reporting</span>
+        <b>Automation</b><span>Make.com, Zapier, Power Automate, Gallabox, WhatsApp, Meta Lead Ads, AI calling</span>
+        <b>Development</b><span>Next.js, React, TypeScript, JavaScript, Tailwind CSS, Laravel, Java, Spring Boot, Flutter</span>
+        <b>Data &amp; tools</b><span>PostgreSQL, MySQL, Prisma, REST APIs, webhooks, Git, Docker, Postman</span>
+        <b>AI</b><span>Claude, Model Context Protocol (MCP), Salesforce Agentforce, AI agents, AI calling</span>
+      </div>
+
+      <h4>Education &amp; certifications</h4>
+      <p><b>Bachelor of Computer Applications</b> — University of Rabindranath Tagore, India (2019 – 2022)</p>
+      <p style="margin-top:6px">Oracle Cloud AI Professional · Oracle Cloud Infrastructure Foundations · Git Advanced (Udemy)</p>
+
+      <h4>Languages</h4>
+      <p>English · Arabic · Hindi · Malayalam</p>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2 class="h2">Let's automate <em>your business.</em></h2>
+    <p class="lede">Pick what you need, and the message writes itself. Copy it into your email, or send it on WhatsApp in one tap.</p>
+
+    <div class="contact-grid">
+      <div class="reach">
+        <div class="reach-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <div><small>Email</small><div class="val">yasirhussaints@outlook.com</div></div>
+          <button type="button" class="btn btn-ghost btn-sm" data-copy="yasirhussaints@outlook.com">Copy</button>
+        </div>
+        <div class="reach-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12Z"/></svg></div>
+          <div><small>Phone · WhatsApp</small><div class="val">+971 50 512 0313</div></div>
+          <button type="button" class="btn btn-ghost btn-sm" data-copy="+971505120313">Copy</button>
+        </div>
+        <div class="reach-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></svg></div>
+          <div><small>LinkedIn</small><div class="val">in/yasir-hussain-a78b641aa</div></div>
+          <a class="btn btn-ghost btn-sm" href="https://linkedin.com/in/yasir-hussain-a78b641aa" target="_blank" rel="noopener">Open ↗</a>
+        </div>
+        <div class="reach-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></div>
+          <div><small>GitHub</small><div class="val">YasirHussainTs</div></div>
+          <a class="btn btn-ghost btn-sm" href="https://github.com/YasirHussainTs" target="_blank" rel="noopener">Open ↗</a>
+        </div>
+      </div>
+
+      <form class="composer" id="composer" novalidate>
+        <div>
+          <h3>Message composer</h3>
+          <p class="sub">Choose a reason, add your name, and the email is ready.</p>
+        </div>
+        <div class="intents" role="group" aria-label="Reason for contact">
+          <button type="button" class="intent" data-intent="hire" aria-pressed="true">Hire full-time</button>
+          <button type="button" class="intent" data-intent="project" aria-pressed="false">Automation project</button>
+          <button type="button" class="intent" data-intent="call" aria-pressed="false">Quick intro call</button>
+        </div>
+        <div class="fields">
+          <div class="field"><label for="c-name">Your name</label><input id="c-name" type="text" placeholder="e.g. Ahmed Al Mansoori" autocomplete="name"></div>
+          <div class="field"><label for="c-company">Company</label><input id="c-company" type="text" placeholder="e.g. Your company LLC" autocomplete="organization"></div>
+        </div>
+        <div class="field"><label for="c-subject">Subject</label><input id="c-subject" type="text"></div>
+        <div class="field"><label for="c-body">Message</label><textarea id="c-body"></textarea></div>
+        <div class="send">
+          <span class="send-label">Send with</span>
+          <div class="send-row">
+            <a class="btn btn-ghost" id="gmail-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=yasirhussaints@outlook.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M2 6.5v11A1.5 1.5 0 0 0 3.5 19H6V9.8l6 4.5 6-4.5V19h2.5a1.5 1.5 0 0 0 1.5-1.5v-11l-2.3-1.7L12 10.6 4.3 4.8 2 6.5Z"/><path fill="#EA4335" d="M6 9.8 2 6.8V6a2 2 0 0 1 3.2-1.6L12 9.5l6.8-5.1A2 2 0 0 1 22 6v.8l-4 3-6 4.5-6-4.5Z"/></svg>
+              Gmail
+            </a>
+            <a class="btn btn-ghost" id="outlook-link" href="https://outlook.office.com/mail/deeplink/compose?to=yasirhussaints@outlook.com" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="12" height="14" rx="2" fill="#0A64D6"/><path fill="#fff" d="M8 8.6c-1.8 0-3 1.4-3 3.4s1.2 3.4 3 3.4 3-1.4 3-3.4-1.2-3.4-3-3.4Zm0 5.3c-.9 0-1.4-.8-1.4-1.9s.5-1.9 1.4-1.9 1.4.8 1.4 1.9-.5 1.9-1.4 1.9Z"/><path fill="#28A8EA" d="M14 8h7a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-7Z"/><path fill="#fff" opacity=".9" d="m14 10 4 2.6 4-2.6v1.4l-4 2.6-4-2.6Z"/></svg>
+              Outlook
+            </a>
+            <a class="btn btn-ghost" id="wa-link" href="https://wa.me/971505120313" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/><path fill="#fff" d="M9.1 7.3c-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.2.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.8 6.8 0 0 1-3.4-3c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.9Z"/></svg>
+              WhatsApp
+            </a>
+            <a class="btn btn-ghost" id="mail-link" href="mailto:yasirhussaints@outlook.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              Mail app
+            </a>
+          </div>
+          <button type="button" class="btn btn-blue" id="copy-msg" style="width:100%">Copy message</button>
+          <p class="send-hint">Gmail and Outlook open a ready-to-send draft in a new tab. Mail app uses the email program on this device.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Yasir Hussain</span>
+    <span>Based in Dubai · Automating businesses worldwide</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // toast + copy
+  const toast = document.getElementById('toast');
+  let tt;
+  function say(msg) {
+    toast.textContent = msg; toast.classList.add('show');
+    clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+  function copy(text, done) {
+    const fallback = () => {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      let ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+      ta.remove(); say(ok ? done : 'Select the text and copy it manually');
+    };
+    try {
+      navigator.clipboard.writeText(text).then(() => say(done), fallback);
+    } catch (e) { fallback(); }
+  }
+  document.querySelectorAll('[data-copy]').forEach(b =>
+    b.addEventListener('click', () => copy(b.dataset.copy, 'Copied'))
+  );
+
+  // resume download: fetch as a file so it saves on every browser
+  document.querySelectorAll('.dl-cv').forEach(a => a.addEventListener('click', e => {
+    if (!/^https?:$/.test(location.protocol)) return; // local file: let the browser handle it
+    e.preventDefault();
+    fetch(a.getAttribute('href')).then(r => { if (!r.ok) throw 0; return r.blob(); }).then(blob => {
+      const url = URL.createObjectURL(blob), t = document.createElement('a');
+      t.href = url; t.download = 'YasirHussain-Resume-2026.pdf';
+      document.body.appendChild(t); t.click(); t.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 4000);
+      say('Resume downloading');
+    }).catch(() => { window.location.href = a.getAttribute('href'); });
+  }));
+
+  // glow parallax + card spotlight
+  const g1 = document.querySelector('.g1'), g2 = document.querySelector('.g2');
+  document.addEventListener('mousemove', e => {
+    if (reduce) return;
+    const x = (e.clientX / innerWidth - .5) * 30, y = (e.clientY / innerHeight - .5) * 30;
+    g1.style.transform = `translate(${x}px,${y}px)`;
+    g2.style.transform = `translate(${-x * .7}px,${-y * .7}px)`;
+  });
+  document.querySelectorAll('.card').forEach(c => c.addEventListener('mousemove', e => {
+    const r = c.getBoundingClientRect();
+    c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }));
+
+  // automation window
+  const nodes = [...document.querySelectorAll('#flow .node')];
+  const log = document.getElementById('log');
+  let i = 0, lines = [];
+  const clock = () => {
+    const d = new Date(); return [d.getHours(), d.getMinutes(), d.getSeconds()].map(n => String(n).padStart(2, '0')).join(':');
+  };
+  function renderLog() {
+    log.innerHTML = lines.slice(-4).map(l => `<div><span class="ts">${l.t}</span>${l.ok ? '<span class="ok">✓</span> ' : ''}${l.m}</div>`).join('') + '<span class="caret"></span>';
+  }
+  function paint(step) {
+    nodes.forEach((n, k) => {
+      n.classList.toggle('done', k < step);
+      n.classList.toggle('active', k === step);
+      n.querySelector('.node-state').textContent = k < step ? 'done' : k === step ? 'running' : 'waiting';
+    });
+  }
+  // resting state: first three done, fourth running
+  lines = nodes.slice(0, 3).map(n => ({ t: clock(), m: n.dataset.log, ok: true }));
+  paint(3); renderLog();
+  if (!reduce) {
+    i = 3;
+    setInterval(() => {
+      if (i >= nodes.length) {
+        lines.push({ t: clock(), m: 'Next lead in queue…', ok: false });
+        i = 0; paint(0); renderLog(); return;
+      }
+      lines.push({ t: clock(), m: nodes[i].dataset.log, ok: true });
+      i++; paint(i); renderLog();
+    }, 1600);
+  }
+
+  // before / after
+  const journey = [
+    { name: 'New enquiry', manual: 'Leads sit in Meta or a spreadsheet until someone downloads them, sometimes the next day.', auto: 'Every enquiry lands in the CRM the moment it is submitted, with source and campaign attached.', m: 'hours late', a: 'instant' },
+    { name: 'Assignment', manual: 'A manager forwards leads by hand. Some go to two people, some to nobody.', auto: 'Routing rules assign one owner by service, language and workload. Duplicates are blocked.', m: 'no owner', a: 'one owner' },
+    { name: 'First contact', manual: 'The agent calls when free. Busy days mean the lead goes cold.', auto: 'An AI call and a WhatsApp message go out automatically. The result is saved on the record.', m: 'missed', a: 'same minute' },
+    { name: 'Follow-up', manual: 'Reminders live in personal notes and memory.', auto: 'The CRM schedules follow-ups and flags any lead that has gone quiet.', m: 'forgotten', a: 'scheduled' },
+    { name: 'Handoff & report', manual: 'Finance asks sales for details on WhatsApp. Reports are built by hand at month end.', auto: 'Won deals flow to Zoho Books. The dashboard updates itself every day.', m: 'month end', a: 'daily' }
+  ];
+  const jEl = document.getElementById('journey');
+  let mode = 'auto';
+  function drawJourney() {
+    jEl.innerHTML = journey.map(s => `
+      <div class="step">
+        <div class="step-name">${s.name}</div>
+        <div class="step-text">${mode === 'auto' ? s.auto : s.manual}</div>
+        <span class="step-tag ${mode === 'auto' ? 'good' : 'bad'}">${mode === 'auto' ? s.a : s.m}</span>
+      </div>`).join('');
+  }
+  drawJourney();
+  document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.mode === mode) return;
+    mode = b.dataset.mode;
+    document.querySelectorAll('.seg button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    if (reduce) { drawJourney(); return; }
+    jEl.classList.add('swap');
+    setTimeout(() => { drawJourney(); jEl.classList.remove('swap'); }, 200);
+  }));
+
+  // CV copy
+  const cvText = `YASIR HUSSAIN
+CRM Automation Specialist | AI & Business Process Automation
+Dubai, UAE | +971 50 512 0313 | yasirhussaints@outlook.com
+linkedin.com/in/yasir-hussain-a78b641aa | github.com/YasirHussainTs
+
+SUMMARY
+CRM and automation specialist with a software engineering background. I design connected sales and operations workflows across Zoho, Salesforce, Make.com, Zapier, WhatsApp and AI calling, and build custom tools in Next.js, Laravel and Spring Boot when the business needs more. Focus: fast lead response, clear ownership, accurate pipeline data and reporting managers can act on.
+
+EXPERIENCE
+Backend & CRM Automation Specialist | 360Medicare Consultancy LLC, Dubai | Nov 2025 - Present
+- Connected Meta lead campaigns to Zoho CRM (Make.com, Zapier, Zoho LeadChain) with structured assignment and tracking
+- Integrated TidyHire AI calling outcomes into lead records
+- Built workflows across Zoho CRM, Flow, Creator and Books: lead routing, reminders, approvals, notifications, document flows
+- Building a unified internal operations platform (Next.js, TypeScript, Prisma, PostgreSQL); researching MCP and agentic AI
+
+Software Engineer | Erick Trading LLC, Sharjah | Apr 2025 - Oct 2025
+- POS, billing, booking and customer management features in Laravel, MySQL and REST APIs
+- Next.js web and Flutter mobile (MVVM); Stripe payments, Firebase notifications; WordPress and Wix sites
+
+Software Engineer | Diviso SoftTech, India | Jun 2022 - Jul 2024
+- Java, Spring Boot, microservices and REST APIs; Flutter features on backend APIs
+- Mentored juniors and interns; published reusable Spring Boot and Flutter modules
+
+SKILLS
+CRM platforms: Zoho CRM, Flow, Creator, Books, Analytics, Recruit; Salesforce CRM
+Automation: Make.com, Zapier, Power Automate, Gallabox, WhatsApp, Meta Lead Ads, AI calling
+Development: Next.js, React, TypeScript, JavaScript (ES6+), Tailwind CSS, Laravel, Java, Spring Boot, Flutter
+Data & tools: PostgreSQL, MySQL, Prisma, REST APIs, webhooks, Git, Docker, Postman
+AI: Claude, Model Context Protocol (MCP), Salesforce Agentforce, AI agents, AI calling
+
+EDUCATION
+Bachelor of Computer Applications, University of Rabindranath Tagore, India (2019 - 2022)
+
+CERTIFICATIONS
+Oracle Cloud AI Professional; Oracle Cloud Infrastructure Foundations; Git Advanced (Udemy)
+
+LANGUAGES
+English, Arabic, Hindi, Malayalam`;
+  document.getElementById('copy-cv').addEventListener('click', () => copy(cvText, 'CV copied as plain text'));
+
+  // composer
+  const templates = {
+    hire: {
+      subject: 'Role opportunity: CRM & Automation at {company}',
+      body: `Hi Yasir,
+
+I'm {name} from {company}. I saw your portfolio and would like to talk about a full-time role leading CRM and business automation with us.
+
+Could you share your availability for a call this week, and your notice period?
+
+Best regards,
+{name}`
+    },
+    project: {
+      subject: 'Automation project for {company}',
+      body: `Hi Yasir,
+
+I'm {name} from {company}. We'd like help automating part of our business:
+
+- Where leads come from:
+- Tools we use today (CRM, WhatsApp, accounting):
+- The manual step that costs us the most time:
+
+Could we set up a short call to scope it?
+
+Thanks,
+{name}`
+    },
+    call: {
+      subject: 'Intro call: {name} from {company}',
+      body: `Hi Yasir,
+
+I'm {name} from {company}. I'd like a 20-minute intro call to understand how you could help us automate our sales and operations.
+
+What times work for you?
+
+Best,
+{name}`
+    }
+  };
+  const $ = id => document.getElementById(id);
+  let intent = 'hire', edited = false;
+  function fill() {
+    const name = $('c-name').value.trim() || '[Your name]';
+    const company = $('c-company').value.trim() || '[Company]';
+    const t = templates[intent];
+    const rep = s => s.replaceAll('{name}', name).replaceAll('{company}', company);
+    if (!edited) { $('c-subject').value = rep(t.subject); $('c-body').value = rep(t.body); }
+    syncLinks();
+  }
+  function syncLinks() {
+    const s = $('c-subject').value, b = $('c-body').value;
+    const to = 'yasirhussaints@outlook.com', es = encodeURIComponent(s), eb = encodeURIComponent(b);
+    $('mail-link').href = 'mailto:' + to + '?subject=' + es + '&body=' + eb;
+    $('gmail-link').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + to + '&su=' + es + '&body=' + eb;
+    $('outlook-link').href = 'https://outlook.office.com/mail/deeplink/compose?to=' + to + '&subject=' + es + '&body=' + eb;
+    $('wa-link').href = 'https://wa.me/971505120313?text=' + encodeURIComponent(s + '\n\n' + b);
+  }
+  document.querySelectorAll('.intent').forEach(b => b.addEventListener('click', () => {
+    intent = b.dataset.intent; edited = false;
+    document.querySelectorAll('.intent').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    fill();
+  }));
+  ['c-name', 'c-company'].forEach(id => $(id).addEventListener('input', fill));
+  ['c-subject', 'c-body'].forEach(id => $(id).addEventListener('input', () => { edited = true; syncLinks(); }));
+  $('composer').addEventListener('submit', e => e.preventDefault());
+  $('copy-msg').addEventListener('click', () =>
+    copy('To: yasirhussaints@outlook.com\nSubject: ' + $('c-subject').value + '\n\n' + $('c-body').value, 'Message copied. Paste it into your email.')
+  );
+  fill();
+})();
+</script>
+</body>
+</html>

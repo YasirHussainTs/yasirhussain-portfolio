@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/YasirHussain-Resume-2026.pdf",
+      "headers": [{ "key": "Content-Disposition", "value": "inline; filename=\"YasirHussain-Resume-2026.pdf\"" }]
+    }
+  ]
+}
